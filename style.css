@@ -11,14 +11,14 @@
     list-style: none;
 }
 
-:root{
+:root {
     --cor01: #81B622;
     --cor02: #59981A;
     --cor03: #3D550C;
     --cor04: #ECF87F;
 }
 
-body{
+body {
     background-color: var(--cor01);
     height: 220dvh;
 }
@@ -33,7 +33,7 @@ header {
 
     display: flex;
     flex-flow: row wrap;
-    gap: .4rem;
+    gap: 1rem;
     justify-content: space-around;
     align-items: center;
 }
@@ -41,15 +41,17 @@ header {
 header h1 {
     text-transform: uppercase;
     font-weight: 400;
+    font-size: clamp(1.5rem, 3vw, 2rem);
 }
 
-header span {
+span {
     animation: dot 1s steps(1, end) infinite;
     font-weight: 250;
 }
 
 header ul {
-    font-size: max(1rem, .65rem);
+    font-size: clamp(.85rem, 2vw, 1rem);
+
     display: flex;
     width: 100%;
     gap: 2rem;
@@ -69,16 +71,31 @@ header ul {
     }
 }
 
-section.hero{
+section.hero {
     background: var(--cor03) url("imagens/bg02.png") no-repeat fixed;
     background-size: cover;
-    height: 500px;
+    height: auto;
     padding: 2rem 8.5%;
 }
-.hero__texto{
-    margin-top: 5rem;
-    backdrop-filter: blur(5px);
+
+.hero__texto {
+    margin: 8rem 0rem;
+    backdrop-filter: blur(6px);
     padding: .5rem;
     border-radius: 1rem;
     color: var(--cor04);
+    width: 80%;
+
+    h2 {
+        font-size: 3.5rem;
+        font-weight: 400;
+        font-family: serif;
+    }
+
+    p {
+        text-align: justify;
+        margin-top: 1rem;
+        font-size: .9rem;
+        width: 90%;
+    }
 }
