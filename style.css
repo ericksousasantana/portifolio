@@ -20,13 +20,15 @@
 
 body{
     background-color: var(--cor01);
+    height: 220dvh;
 }
 
 header {
+    position: fixed;
     width: 100%;
     padding: .2rem .5rem;
-    background-color: var(--cor03);
-    box-shadow: 0px 0px 5px 2px var(--cor02);
+    /*background-color: var(--cor03);
+    box-shadow: 0px 0px 5px 2px var(--cor02);*/
     color: var(--cor04);
 
     display: flex;
@@ -65,4 +67,18 @@ header ul {
     100% {
         opacity: 1;
     }
+}
+
+section.hero{
+    background: var(--cor03) url("imagens/bg02.png") no-repeat fixed;
+    background-size: cover;
+    height: 500px;
+    padding: 2rem 8.5%;
+}
+.hero__texto{
+    margin-top: 5rem;
+    backdrop-filter: blur(5px);
+    padding: .5rem;
+    border-radius: 1rem;
+    color: var(--cor04);
 }
