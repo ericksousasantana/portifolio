@@ -16,6 +16,7 @@
     --cor02: #59981A;
     --cor03: #3D550C;
     --cor04: #ECF87F;
+    --cor05: #121a04;
 }
 
 body {
@@ -56,6 +57,10 @@ header ul {
     width: 100%;
     gap: 2rem;
 }
+header a:hover{
+    opacity: .5;
+    transition: .3s;
+}
 
 @keyframes dot {
     0% {
@@ -70,6 +75,8 @@ header ul {
         opacity: 1;
     }
 }
+
+/* HERO SECTION */
 
 section.hero {
     background: var(--cor03) url("imagens/bg02.png") no-repeat fixed;
@@ -98,4 +105,67 @@ section.hero {
         font-size: .9rem;
         width: 90%;
     }
+}
+
+/* Mini-cards section competências */
+
+.competencias{
+    position: relative;
+    overflow: hidden;
+}
+
+.competencias h2{
+    text-align: center;
+    margin: 4rem 0rem;
+    font-family: serif;
+    font-size: clamp(2.5rem, 8vw, 3rem);
+    color: var(--cor05);
+}
+
+.competencias__container{
+    width: 100%;
+    padding: 1rem;
+    justify-content: space-evenly;
+    max-width: 1200px;
+    margin: 5rem auto;
+
+    display: flex;
+    flex-flow: wrap;
+}
+
+.card{
+    z-index: 1;
+    text-align: center;
+    width: clamp(150px, 45%, 250px);
+    box-shadow: 0px 0px 5px 0.5px var(--cor03);
+    background-color: var(--cor02);
+    padding: 1rem;
+    border-radius: 1rem;
+    margin: .5rem .25rem;
+    color: rgb(31, 14, 3);
+
+    h2{
+        margin: .5rem 1rem 1rem 1rem;
+        font-size: clamp(1.5rem, 3vw, 2rem);
+        font-weight: 400;
+    }
+    p{
+        margin-bottom: .5rem;
+        font-size: clamp(.85rem, 2vw, 1rem);
+
+    }
+}
+.mini-cards__icon{
+    max-width: 5rem;
+}
+
+#caules{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+#planta{
+    position: absolute;
+    top: 30%;
+    left: 75%;
 }
